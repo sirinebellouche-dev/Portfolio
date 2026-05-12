@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Design | Sirine Agency</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="assets/Accueil%20(2).jpg" as="image">
+</head>
+
+<body>
+    <header id="main-header">
+        <nav class="container">
+            <div class="logo-container">
+                <a href="index.html" style="text-decoration: none; display: flex; align-items: center;">
+                    <img src="assets/logo.png" alt="Sirine Agency Logo" class="logo-img">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#hero">Accueil</a></li>
+                <li><a href="index.html#projects">Projets</a></li>
+                <li><a href="https://www.instagram.com/sirine_agency/" target="_blank" class="instagram-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a></li>
+                <li><a href="contact.html" class="btn-contact">Contactez-moi</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="brand-project-page">
+        <!-- Project Info Header -->
+        <section class="project-info-minimal container animate">
+            <div class="project-intro">
+                <h1>Landing Page <span>Design</span></h1>
+            </div>
+        </section>
+
+        <div class="project-content">
+            <!-- Premium Showcase Inspired by User Image -->
+            <section class="container" style="padding: 0;">
+                <div class="showcase-textured">
+                    <div class="showcase-grid">
+                        <!-- Mobile View Mockup -->
+                        <div class="showcase-mobile animate-left">
+                            <div class="mobile-frame-long">
+                                <div class="mobile-screen-scroll">
+                                    <img src="assets/Accueil%20(2).jpg" alt="Mobile View" fetchpriority="high" decoding="async">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Desktop iMac Mockup -->
+                        <div class="showcase-desktop animate-right">
+                            <div class="imac-mockup-v2">
+                                <div class="imac-frame-v2">
+                                    <div class="imac-screen-v2">
+                                        <img src="assets/Accueil%20(2).jpg" alt="iMac View" fetchpriority="high" decoding="async">
+                                    </div>
+                                </div>
+                                <div class="imac-bottom-v2">
+                                    <div class="imac-logo">
+                                        <svg viewBox="0 0 24 24" fill="black"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.1 2.48-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .76-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                                    </div>
+                                </div>
+                                <div class="imac-stand-v2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features with Points -->
+            <section class="section-padded bg-alt">
+                <div class="container">
+                    <div class="mockup-container-social">
+                        <div class="feature-points-wrapper">
+                            <div class="feature-image-container mockup-shadow">
+                                <img src="assets/Accueil%20(2).jpg" alt="Detail View" class="detail-img" loading="lazy" decoding="async">
+                                <!-- Annotation Points -->
+                                <div class="annotation-point" style="top: 15%; left: 10%;" data-text="En-tête épuré et navigation intuitive">1</div>
+                                <div class="annotation-point" style="top: 45%; left: 80%;" data-text="Appel à l'action stratégique (CTA)">2</div>
+                                <div class="annotation-point" style="top: 75%; left: 30%;" data-text="Design responsive et aéré">3</div>
+                            </div>
+                        </div>
+                        <div class="project-description-side">
+                            <div class="info-grid" style="grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 2.5rem; background: white; padding: 2rem; border-radius: var(--radius-lg);">
+                                <div class="info-item">
+                                    <span class="info-label">Client</span>
+                                    <span class="info-value">L'Écrin - Restaurant Gastronomique</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Mission</span>
+                                    <span class="info-value">Landing Page & Réservation</span>
+                                </div>
+                            </div>
+                            <div class="section-title-sm">
+                                <span class="sub-title">Analyse UX</span>
+                                <h2>Optimisation du parcours</h2>
+                            </div>
+                            <p>Une landing page conçue pour transformer chaque visiteur en client potentiel. L'accent est mis sur la clarté de l'offre et la fluidité de la navigation, avec des points de contact stratégiquement placés.</p>
+                            
+                            <div class="marketing-benefits">
+                                <div class="benefit-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--primary);"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                                    <span><strong>Conversion optimisée :</strong> Réduction des points de friction pour guider l'utilisateur vers l'action souhaitée.</span>
+                                </div>
+                                <div class="benefit-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--primary);"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+                                    <span><strong>Crédibilité immédiate :</strong> Une interface soignée renvoie l'image d'un établissement sérieux et haut de gamme.</span>
+                                </div>
+                                <div class="benefit-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--primary);"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                                    <span><strong>Expérience cross-device :</strong> Navigation fluide sur mobile, tablette et desktop pour ne perdre aucun visiteur.</span>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+
+        <section class="next-steps container" style="padding: 120px 0;">
+            <a href="index.html#projects" class="btn-outline">Retour aux projets</a>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

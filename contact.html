@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Sirine Agency</title>
+    <meta name="description" content="Contactez Sirine Agency pour vos projets de design graphique et marketing digital. Devis gratuit.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="main-header">
+        <nav class="container">
+            <div class="logo-container">
+                <a href="index.html"><img src="assets/logo.png" alt="Sirine Agency Logo" class="logo-img"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#projects">Projets</a></li>
+                <li><a href="https://www.instagram.com/sirine_agency/" target="_blank" class="instagram-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a></li>
+                <li><a href="contact.html" class="btn-contact active">Contactez-moi</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info animate">
+                        <span class="free-quote-badge">Devis gratuit & sans engagement</span>
+                        <h1>Parlons de votre prochain <span>projet.</span></h1>
+                        <p>Vous avez une idée, un projet de branding ou besoin d'une stratégie social media ? Je suis là pour vous accompagner.</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">✉️</div>
+                                <div class="contact-item-text">
+                                    <span>Email</span>
+                                    <a href="mailto:sirine.bellouche@gmail.com">sirine.bellouche@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">📸</div>
+                                <div class="contact-item-text">
+                                    <span>Instagram</span>
+                                    <a href="https://www.instagram.com/sirine_agency/" target="_blank">@sirine_agency</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container animate" style="animation-delay: 0.2s;">
+                        <form action="https://formspree.io/f/sirine.bellouche@gmail.com" method="POST">
+                            <div class="form-group">
+                                <input type="text" name="name" id="name" required>
+                                <label for="name">Nom complet</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" id="email" required>
+                                <label for="email">Adresse Email</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="subject" id="subject" required>
+                                <label for="subject">Sujet du projet</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" id="message" rows="5" required></textarea>
+                                <label for="message">Parlez-moi de votre projet...</label>
+                            </div>
+                            <button type="submit" class="btn-submit">Envoyer ma demande</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="padding: 60px 0; border-top: 1px solid #efefef; text-align: center;">
+        <div class="container">
+            <img src="assets/logo.png" alt="Sirine Agency" style="height: 40px; margin-bottom: 20px; opacity: 0.5;">
+            <p style="color: #888; font-size: 0.9rem;">&copy; 2024 Sirine Agency. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
