@@ -27,6 +27,8 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body {
@@ -1910,6 +1912,10 @@ img.loaded {
     
     .meta-suite-visual {
         order: 2;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
     }
     
     .meta-suite-content {
@@ -2469,14 +2475,19 @@ html, body {
 @media (max-width: 768px) {
     .scrollable-mockup-wrapper {
         width: 100% !important;
+        max-width: 100% !important;
         overflow-x: hidden !important; /* Block all horizontal scrolls since it fits perfectly! */
-        margin: 0 auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding: 0 !important;
     }
 
     .scrollable-mockup-wrapper .browser-mockup {
         min-width: 100% !important;
         width: 100% !important;
-        margin: 0 auto !important;
+        max-width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
     
     .meta-sidebar {
