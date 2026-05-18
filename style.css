@@ -351,20 +351,35 @@ h1 span::after {
 }
 
 /* Animations */
+@-webkit-keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(30px);
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
+        -webkit-transform: translateY(30px);
         transform: translateY(30px);
     }
-
     to {
         opacity: 1;
+        -webkit-transform: translateY(0);
         transform: translateY(0);
     }
 }
 
 .animate {
-    animation: fadeInUp 0.8s ease forwards;
+    -webkit-animation: fadeInUp 0.8s ease both;
+    animation: fadeInUp 0.8s ease both;
 }
 
 /* Brand Identity Page Refined */
@@ -2065,4 +2080,375 @@ img.loaded {
 .no-lightbox:hover {
     transform: none !important;
     box-shadow: 0 20px 40px rgba(0,0,0,0.08) !important;
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVENESS & PREMIUM STYLING
+   ========================================================================== */
+
+/* Hamburger Button */
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 19px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1100;
+}
+
+.hamburger-btn span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--text);
+    border-radius: 4px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hamburger active transformation morphing into standard close 'X' */
+.hamburger-btn.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    background-color: var(--text);
+}
+
+.hamburger-btn.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.hamburger-btn.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    background-color: var(--text);
+}
+
+/* General Layout Responsive Safety */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+/* Anaïs SR Salon Main Image Class */
+.salon-main-img {
+    width: 100%;
+    height: auto !important;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 32px;
+    display: block;
+}
+
+/* Meta Business Suite Scrollable Wrapper */
+.scrollable-mockup-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+.scrollable-mockup-wrapper .browser-mockup {
+    min-width: 650px;
+}
+
+/* --- Table Breakpoint (992px) --- */
+@media (max-width: 992px) {
+    .container {
+        padding: 0 2rem;
+    }
+
+    .logo-container {
+        margin-left: 0;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        padding: 60px 0;
+        min-height: auto;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+        text-align: center;
+    }
+
+    .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-btns {
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-visual {
+        max-width: 500px;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+/* --- Mobile Breakpoint (992px) --- */
+@media (max-width: 992px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    header {
+        padding: 0.8rem 0;
+    }
+
+    /* Elegant Responsive Hamburger */
+    .hamburger-btn {
+        display: flex;
+    }
+
+    /* Convert standard links list into fullscreen slide-over glassmorphic menu */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(250, 247, 242, 0.97);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+        transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1050;
+        padding: 2rem;
+        box-shadow: -10px 0 40px rgba(133, 83, 51, 0.08);
+    }
+
+    .nav-links.mobile-open {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 1.6rem;
+        font-weight: 700;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.4s ease, transform 0.4s ease, color 0.3s;
+    }
+
+    .nav-links.mobile-open a {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Sequential Menu Links Fade In */
+    .nav-links.mobile-open li:nth-child(1) a { transition-delay: 0.1s; }
+    .nav-links.mobile-open li:nth-child(2) a { transition-delay: 0.2s; }
+    .nav-links.mobile-open li:nth-child(3) a { transition-delay: 0.3s; }
+    .nav-links.mobile-open li:nth-child(4) a { transition-delay: 0.4s; }
+
+    .logo-img {
+        height: 55px; /* Scaled down logo on mobile */
+    }
+
+    /* General Typography & Headers */
+    h1 {
+        font-size: clamp(2.2rem, 8vw, 3.2rem);
+    }
+
+    .section-title {
+        margin-bottom: 2.5rem;
+    }
+
+    /* Sections Padding */
+    .projects-section, .section-padded {
+        padding: 60px 0;
+    }
+
+    /* Projects grid layout fallback */
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+    }
+
+    .project-card:hover {
+        transform: translateY(-8px);
+    }
+
+    /* Brand Identity Details */
+    .salon-main-img {
+        max-height: 320px;
+        border-radius: 20px;
+    }
+
+    .salon-item img {
+        height: 300px;
+        border-radius: 20px;
+    }
+
+    .salon-gallery {
+        gap: 1.5rem;
+    }
+
+    .salon-grid-2 {
+        margin-top: 1rem !important;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .grid-item {
+        border-radius: 20px;
+        padding: 1.5rem;
+        aspect-ratio: 4/3;
+    }
+
+    /* Landing Page Responsive Mockup */
+    .showcase-textured {
+        padding: 40px 1.5rem;
+        margin: 1rem 0;
+        border-radius: 24px;
+    }
+
+    .showcase-mobile {
+        width: 230px;
+        transform: translateY(0);
+        margin-bottom: 1rem;
+    }
+
+    .mobile-screen-scroll {
+        height: 420px;
+    }
+
+    .imac-frame-v2 {
+        border-radius: 12px 12px 0 0;
+    }
+
+    .imac-bottom-v2 {
+        height: 35px;
+        border-radius: 0 0 12px 12px;
+    }
+
+    .imac-logo svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .imac-stand-v2 {
+        width: 90px;
+        height: 60px;
+    }
+
+    .next-steps {
+        padding: 60px 0 !important;
+    }
+}
+
+/* --- Small Mobile Breakpoint (480px) --- */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1.25rem;
+    }
+
+    /* Floating elements styling safe area */
+    .floating-element {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+        border-radius: 12px;
+    }
+
+    .float-1 {
+        top: -8px;
+        left: 8px;
+    }
+
+    .float-2 {
+        bottom: 15px;
+        right: 8px;
+    }
+
+    /* Brand identity color palette grid */
+    .color-palette {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+        margin-top: 2rem;
+    }
+
+    .swatch-box {
+        height: 80px;
+        border-radius: 12px;
+    }
+
+    /* Smartphone mockup fluid resizing on very small screens */
+    .phone-mockup {
+        width: 260px;
+        height: 537px;
+    }
+
+    .phone-frame {
+        border-radius: 40px;
+        padding: 8px;
+        border-width: 3px;
+    }
+
+    .phone-screen {
+        border-radius: 32px;
+    }
+
+    .phone-notch {
+        width: 80px;
+        height: 24px;
+        top: 6px;
+    }
+
+    .status-bar {
+        height: 32px;
+        padding: 0 20px;
+        font-size: 10px;
+    }
+
+    .insta-nav {
+        padding: 35px 12px 8px;
+    }
+
+    /* Contact Form Padding Adjustments for Input Fields width optimization */
+    .contact-form-container {
+        padding: 1.8rem 1.2rem;
+        border-radius: 20px;
+    }
+
+    .contact-section {
+        padding: 50px 0;
+    }
+
+    .contact-info h1 {
+        font-size: 2.2rem;
+    }
+
+    .free-quote-badge {
+        font-size: 0.75rem;
+        padding: 0.4rem 1rem;
+    }
+}
+
+/* --- iPhone SE Extra Small (360px) --- */
+@media (max-width: 360px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .nav-links {
+        gap: 2rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .color-palette {
+        grid-template-columns: 1fr;
+    }
 }
