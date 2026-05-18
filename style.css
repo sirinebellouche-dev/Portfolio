@@ -1348,19 +1348,19 @@ img.loaded {
     z-index: 10;
 }
 
-/* Centering, shifting left, and applying subtle 3D tilt */
+/* Centering and shifting left, perfectly straight */
 .phone-center {
     top: 50%;
     left: 12%;
-    transform: translate3d(-50%, -42%, 40px) rotateX(15deg) rotateY(-8deg) rotateZ(-5deg);
+    transform: translate3d(-50%, -42%, 0);
     z-index: 3;
 }
 
 .phone-center:hover {
-    transform: translate3d(-50%, -45%, 60px) rotateX(10deg) rotateY(-5deg) rotateZ(-3deg);
+    transform: translate3d(-50%, -45%, 0);
     box-shadow: 
-        -15px 15px 35px rgba(0,0,0,0.18),
-        -5px 5px 12px rgba(0,0,0,0.12);
+        0 30px 60px rgba(0,0,0,0.18),
+        0 10px 25px rgba(0,0,0,0.1);
 }
 
 /* Sleek Flat Computer Monitor Mockup (Right) - Perfectly Straight */
@@ -1378,12 +1378,12 @@ img.loaded {
     transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s;
     top: 50%;
     left: 70%;
-    transform: translate3d(-50%, -55%, -20px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    transform: translate3d(-50%, -55%, 0);
     z-index: 1;
 }
 
 .iso-monitor:hover {
-    transform: translate3d(-50%, -58%, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    transform: translate3d(-50%, -58%, 0);
     box-shadow: 
         0 35px 70px rgba(0,0,0,0.2),
         0 12px 30px rgba(0,0,0,0.12);
