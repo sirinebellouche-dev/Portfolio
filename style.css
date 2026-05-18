@@ -1254,7 +1254,7 @@ img.loaded {
 /* Premium Showcase Section with 3D Isometric Projection */
 .showcase-textured {
     background: #f4f1ee; /* Solid background for performance */
-    padding: 100px 0;
+    padding: 20px 0;
     position: relative;
     overflow: hidden;
     border-radius: var(--radius-lg);
@@ -1269,7 +1269,7 @@ img.loaded {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 440px;
+    height: 380px;
     width: 100%;
     overflow: visible;
     position: relative;
@@ -1291,11 +1291,11 @@ img.loaded {
 
 .iso-iphone {
     position: absolute;
-    width: 175px;
-    height: 360px;
+    width: 200px;
+    height: 410px;
     background: #000;
-    border-radius: 36px;
-    padding: 7px;
+    border-radius: 42px;
+    padding: 8px;
     box-shadow: 
         -10px 10px 25px rgba(0,0,0,0.12),
         -3px 3px 8px rgba(0,0,0,0.08),
@@ -1306,7 +1306,7 @@ img.loaded {
 
 .iphone-bezel {
     border: 3.5px solid;
-    border-radius: 30px;
+    border-radius: 34px;
     height: 100%;
     box-sizing: border-box;
     overflow: hidden;
@@ -1315,7 +1315,7 @@ img.loaded {
 .iphone-screen {
     width: 100%;
     height: 100%;
-    border-radius: 26px;
+    border-radius: 30px;
     background-size: cover;
     background-position: top center;
     position: relative;
@@ -1341,8 +1341,8 @@ img.loaded {
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    width: 50px;
-    height: 12px;
+    width: 58px;
+    height: 14px;
     background: #000;
     border-radius: 20px;
     z-index: 10;
@@ -1365,37 +1365,37 @@ img.loaded {
 
 @media (max-width: 992px) {
     .iso-showcase-container {
-        height: 380px;
+        height: 340px;
     }
     .iso-showcase-inner {
-        transform: scale(0.9) rotateX(20deg) rotateZ(-8deg);
+        transform: scale(0.85) rotateX(20deg) rotateZ(-8deg);
     }
     .iso-showcase-inner:hover {
-        transform: scale(0.9) rotateX(15deg) rotateZ(-5deg);
+        transform: scale(0.85) rotateX(15deg) rotateZ(-5deg);
     }
 }
 
 @media (max-width: 768px) {
     .iso-showcase-container {
-        height: 340px;
+        height: 300px;
     }
     .iso-showcase-inner {
-        transform: scale(0.8) rotateX(20deg) rotateZ(-8deg);
+        transform: scale(0.75) rotateX(20deg) rotateZ(-8deg);
     }
     .iso-showcase-inner:hover {
-        transform: scale(0.8) rotateX(15deg) rotateZ(-5deg);
+        transform: scale(0.75) rotateX(15deg) rotateZ(-5deg);
     }
 }
 
 @media (max-width: 480px) {
     .iso-showcase-container {
-        height: 300px;
+        height: 250px;
     }
     .iso-showcase-inner {
-        transform: scale(0.7) rotateX(20deg) rotateZ(-8deg);
+        transform: scale(0.62) rotateX(20deg) rotateZ(-8deg);
     }
     .iso-showcase-inner:hover {
-        transform: scale(0.7) rotateX(15deg) rotateZ(-5deg);
+        transform: scale(0.62) rotateX(15deg) rotateZ(-5deg);
     }
 }
 
