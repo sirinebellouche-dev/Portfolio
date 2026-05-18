@@ -1280,13 +1280,13 @@ img.loaded {
     position: relative;
     width: 840px;
     height: 450px;
-    transform-style: preserve-3d;
-    transform: scale(0.95) rotateX(20deg) rotateY(0deg) rotateZ(-8deg);
+    transform-style: flat;
+    transform: scale(0.95);
     transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .iso-showcase-inner:hover {
-    transform: scale(0.95) rotateX(15deg) rotateY(0deg) rotateZ(-5deg);
+    transform: scale(0.97);
 }
 
 .iso-iphone {
@@ -1297,10 +1297,9 @@ img.loaded {
     border-radius: 48px;
     padding: 9px;
     box-shadow: 
-        -10px 10px 25px rgba(0,0,0,0.12),
-        -3px 3px 8px rgba(0,0,0,0.08),
-        inset 0 0 2px rgba(255,255,255,0.25);
-    transform-style: preserve-3d;
+        0 20px 40px rgba(0,0,0,0.12),
+        0 5px 15px rgba(0,0,0,0.06);
+    transform-style: flat;
     transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s;
 }
 
@@ -1348,50 +1347,49 @@ img.loaded {
     z-index: 10;
 }
 
-/* Single centering and subtle hover lift */
+/* Centering and subtle hover lift */
 .phone-center {
     top: 50%;
     left: 16%;
-    transform: translate3d(-50%, -42%, 70px);
+    transform: translate3d(-50%, -42%, 0);
     z-index: 3;
 }
 
 .phone-center:hover {
-    transform: translate3d(-50%, -45%, 95px);
+    transform: translate3d(-50%, -45%, 0);
     box-shadow: 
-        -15px 15px 35px rgba(0,0,0,0.18),
-        -5px 5px 12px rgba(0,0,0,0.12);
+        0 30px 60px rgba(0,0,0,0.18),
+        0 10px 25px rgba(0,0,0,0.1);
 }
 
-/* 3D Computer Monitor Mockup (Right) */
+/* Sleek Flat Computer Monitor Mockup (Right) */
 .iso-monitor {
     position: absolute;
     width: 600px;
     height: 375px;
-    background: #000;
+    background: #0f0f11;
     border-radius: 24px;
     padding: 9px;
     box-shadow: 
-        -12px 12px 30px rgba(0,0,0,0.15),
-        -4px 4px 10px rgba(0,0,0,0.1),
-        inset 0 0 2px rgba(255,255,255,0.25);
-    transform-style: preserve-3d;
+        0 25px 50px rgba(0,0,0,0.15),
+        0 8px 20px rgba(0,0,0,0.08);
+    transform-style: flat;
     transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s;
     top: 50%;
     left: 68%;
-    transform: translate3d(-50%, -55%, -10px);
+    transform: translate3d(-50%, -55%, 0);
     z-index: 1;
 }
 
 .iso-monitor:hover {
-    transform: translate3d(-50%, -58%, 20px);
+    transform: translate3d(-50%, -58%, 0);
     box-shadow: 
-        -16px 16px 40px rgba(0,0,0,0.2),
-        -6px 6px 15px rgba(0,0,0,0.14);
+        0 35px 70px rgba(0,0,0,0.2),
+        0 12px 30px rgba(0,0,0,0.12);
 }
 
 .monitor-bezel {
-    border: 6px solid #2d2d30;
+    border: 6px solid #1c1c1e;
     border-radius: 20px;
     height: 100%;
     box-sizing: border-box;
@@ -1416,37 +1414,38 @@ img.loaded {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 50%);
+    background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0) 50%);
     pointer-events: none;
     z-index: 5;
 }
 
 .monitor-stand {
     position: absolute;
-    bottom: -42px;
+    bottom: -40px;
     left: 50%;
-    transform: translateX(-50%) translateZ(-5px);
-    width: 75px;
-    height: 45px;
-    background: linear-gradient(to right, #202124, #404245, #202124);
+    transform: translateX(-50%);
+    width: 70px;
+    height: 40px;
+    background: linear-gradient(to right, #d1d1d6, #e5e5ea, #b2b2b7);
     z-index: -1;
+    border-radius: 2px;
 }
 
 .monitor-base {
     position: absolute;
-    bottom: -45px;
+    bottom: -43px;
     left: 50%;
-    transform: translateX(-50%) translateZ(-10px) rotateX(85deg);
-    width: 160px;
-    height: 95px;
-    background: #2d2d30;
-    border-radius: 6px;
-    box-shadow: -2px 2px 10px rgba(0,0,0,0.2);
+    transform: translateX(-50%);
+    width: 170px;
+    height: 6px;
+    background: linear-gradient(to right, #b2b2b7, #d1d1d6, #8e8e93);
+    border-radius: 3px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 @media (max-width: 1200px) {
     .iso-showcase-inner {
-        transform: scale(0.9) rotateX(20deg) rotateZ(-8deg);
+        transform: scale(0.9);
     }
 }
 
@@ -1455,10 +1454,10 @@ img.loaded {
         height: 480px;
     }
     .iso-showcase-inner {
-        transform: scale(0.72) rotateX(20deg) rotateZ(-8deg);
+        transform: scale(0.72);
     }
     .iso-showcase-inner:hover {
-        transform: scale(0.72) rotateX(15deg) rotateZ(-5deg);
+        transform: scale(0.72);
     }
 }
 
@@ -1467,10 +1466,10 @@ img.loaded {
         height: 380px;
     }
     .iso-showcase-inner {
-        transform: scale(0.55) rotateX(20deg) rotateZ(-8deg);
+        transform: scale(0.55);
     }
     .iso-showcase-inner:hover {
-        transform: scale(0.55) rotateX(15deg) rotateZ(-5deg);
+        transform: scale(0.55);
     }
 }
 
@@ -1479,10 +1478,10 @@ img.loaded {
         height: 280px;
     }
     .iso-showcase-inner {
-        transform: scale(0.38) rotateX(20deg) rotateZ(-8deg);
+        transform: scale(0.38);
     }
     .iso-showcase-inner:hover {
-        transform: scale(0.38) rotateX(15deg) rotateZ(-5deg);
+        transform: scale(0.38);
     }
 }
 
