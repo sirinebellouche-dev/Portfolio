@@ -2467,8 +2467,16 @@ html, body {
    META BUSINESS SUITE RESPONSIVE MOBILE DASHBOARD
    ========================================================================== */
 @media (max-width: 768px) {
+    .scrollable-mockup-wrapper {
+        width: 100% !important;
+        overflow-x: hidden !important; /* Block all horizontal scrolls since it fits perfectly! */
+        margin: 0 auto !important;
+    }
+
     .scrollable-mockup-wrapper .browser-mockup {
         min-width: 100% !important;
+        width: 100% !important;
+        margin: 0 auto !important;
     }
     
     .meta-sidebar {
@@ -2502,9 +2510,11 @@ html, body {
     
     .planner-days {
         font-size: 0.65rem !important;
+        grid-template-columns: repeat(7, minmax(0, 1fr)) !important; /* Force no overflow */
     }
     
     .meta-planner-grid {
+        grid-template-columns: repeat(7, minmax(0, 1fr)) !important; /* Force no overflow */
         gap: 1px !important;
     }
     
@@ -2523,6 +2533,10 @@ html, body {
 }
 
 @media (max-width: 480px) {
+    .scrollable-mockup-wrapper {
+        width: 100% !important;
+    }
+
     .meta-search {
         width: 90px !important;
     }
