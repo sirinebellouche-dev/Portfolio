@@ -1269,7 +1269,7 @@ img.loaded {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 450px;
+    height: 520px;
     width: 100%;
     overflow: visible;
     position: relative;
@@ -1278,8 +1278,8 @@ img.loaded {
 
 .iso-showcase-inner {
     position: relative;
-    width: 520px;
-    height: 300px;
+    width: 660px;
+    height: 380px;
     transform-style: preserve-3d;
     transform: scale(0.95) rotateX(20deg) rotateY(0deg) rotateZ(-8deg);
     transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
@@ -1291,11 +1291,11 @@ img.loaded {
 
 .iso-iphone {
     position: absolute;
-    width: 150px;
-    height: 310px;
+    width: 200px;
+    height: 410px;
     background: #000;
-    border-radius: 30px;
-    padding: 6px;
+    border-radius: 40px;
+    padding: 8px;
     box-shadow: 
         -10px 10px 25px rgba(0,0,0,0.12),
         -3px 3px 8px rgba(0,0,0,0.08),
@@ -1305,8 +1305,8 @@ img.loaded {
 }
 
 .iphone-bezel {
-    border: 3px solid;
-    border-radius: 25px;
+    border: 3.5px solid;
+    border-radius: 34px;
     height: 100%;
     box-sizing: border-box;
     overflow: hidden;
@@ -1315,7 +1315,7 @@ img.loaded {
 .iphone-screen {
     width: 100%;
     height: 100%;
-    border-radius: 21px;
+    border-radius: 30px;
     background-size: cover;
     background-position: top center;
     position: relative;
@@ -1341,8 +1341,8 @@ img.loaded {
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    width: 44px;
-    height: 10px;
+    width: 58px;
+    height: 14px;
     background: #000;
     border-radius: 20px;
     z-index: 10;
@@ -1351,13 +1351,13 @@ img.loaded {
 /* Single centering and subtle hover lift */
 .phone-center {
     top: 50%;
-    left: 22%;
-    transform: translate3d(-50%, -42%, 50px);
+    left: 18%;
+    transform: translate3d(-50%, -42%, 60px);
     z-index: 3;
 }
 
 .phone-center:hover {
-    transform: translate3d(-50%, -45%, 70px);
+    transform: translate3d(-50%, -45%, 85px);
     box-shadow: 
         -15px 15px 35px rgba(0,0,0,0.18),
         -5px 5px 12px rgba(0,0,0,0.12);
@@ -1366,11 +1366,11 @@ img.loaded {
 /* 3D Computer Monitor Mockup (Right) */
 .iso-monitor {
     position: absolute;
-    width: 310px;
-    height: 195px;
+    width: 440px;
+    height: 275px;
     background: #000;
-    border-radius: 16px;
-    padding: 6px;
+    border-radius: 20px;
+    padding: 8px;
     box-shadow: 
         -12px 12px 30px rgba(0,0,0,0.15),
         -4px 4px 10px rgba(0,0,0,0.1),
@@ -1378,21 +1378,21 @@ img.loaded {
     transform-style: preserve-3d;
     transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s;
     top: 50%;
-    left: 74%;
+    left: 70%;
     transform: translate3d(-50%, -55%, -10px);
     z-index: 1;
 }
 
 .iso-monitor:hover {
-    transform: translate3d(-50%, -58%, 10px);
+    transform: translate3d(-50%, -58%, 15px);
     box-shadow: 
         -16px 16px 40px rgba(0,0,0,0.2),
         -6px 6px 15px rgba(0,0,0,0.14);
 }
 
 .monitor-bezel {
-    border: 3.5px solid #2d2d30;
-    border-radius: 12px;
+    border: 4.5px solid #2d2d30;
+    border-radius: 16px;
     height: 100%;
     box-sizing: border-box;
     overflow: hidden;
@@ -1401,7 +1401,7 @@ img.loaded {
 .monitor-screen {
     width: 100%;
     height: 100%;
-    border-radius: 8px;
+    border-radius: 12px;
     background-size: cover;
     background-position: top center;
     position: relative;
@@ -1423,22 +1423,22 @@ img.loaded {
 
 .monitor-stand {
     position: absolute;
-    bottom: -22px;
+    bottom: -32px;
     left: 50%;
     transform: translateX(-50%) translateZ(-5px);
-    width: 40px;
-    height: 25px;
+    width: 55px;
+    height: 35px;
     background: linear-gradient(to right, #202124, #404245, #202124);
     z-index: -1;
 }
 
 .monitor-base {
     position: absolute;
-    bottom: -25px;
+    bottom: -35px;
     left: 50%;
     transform: translateX(-50%) translateZ(-10px) rotateX(85deg);
-    width: 90px;
-    height: 50px;
+    width: 120px;
+    height: 70px;
     background: #2d2d30;
     border-radius: 6px;
     box-shadow: -2px 2px 10px rgba(0,0,0,0.2);
@@ -1446,25 +1446,25 @@ img.loaded {
 
 @media (max-width: 992px) {
     .iso-showcase-container {
-        height: 380px;
+        height: 440px;
     }
     .iso-showcase-inner {
-        transform: scale(0.78) rotateX(20deg) rotateZ(-8deg);
+        transform: scale(0.8) rotateX(20deg) rotateZ(-8deg);
     }
     .iso-showcase-inner:hover {
-        transform: scale(0.78) rotateX(15deg) rotateZ(-5deg);
+        transform: scale(0.8) rotateX(15deg) rotateZ(-5deg);
     }
 }
 
 @media (max-width: 768px) {
     .iso-showcase-container {
-        height: 320px;
+        height: 350px;
     }
     .iso-showcase-inner {
-        transform: scale(0.6) rotateX(20deg) rotateZ(-8deg);
+        transform: scale(0.62) rotateX(20deg) rotateZ(-8deg);
     }
     .iso-showcase-inner:hover {
-        transform: scale(0.6) rotateX(15deg) rotateZ(-5deg);
+        transform: scale(0.62) rotateX(15deg) rotateZ(-5deg);
     }
 }
 
@@ -1473,10 +1473,10 @@ img.loaded {
         height: 260px;
     }
     .iso-showcase-inner {
-        transform: scale(0.46) rotateX(20deg) rotateZ(-8deg);
+        transform: scale(0.44) rotateX(20deg) rotateZ(-8deg);
     }
     .iso-showcase-inner:hover {
-        transform: scale(0.46) rotateX(15deg) rotateZ(-5deg);
+        transform: scale(0.44) rotateX(15deg) rotateZ(-5deg);
     }
 }
 
