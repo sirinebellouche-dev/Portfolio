@@ -1280,7 +1280,7 @@ img.loaded {
     position: relative;
     width: 840px;
     height: 450px;
-    transform-style: flat;
+    transform-style: preserve-3d;
     transform: scale(0.95);
     transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -1297,9 +1297,10 @@ img.loaded {
     border-radius: 48px;
     padding: 9px;
     box-shadow: 
-        0 20px 40px rgba(0,0,0,0.12),
-        0 5px 15px rgba(0,0,0,0.06);
-    transform-style: flat;
+        -10px 10px 25px rgba(0,0,0,0.12),
+        -3px 3px 8px rgba(0,0,0,0.08),
+        inset 0 0 2px rgba(255,255,255,0.25);
+    transform-style: preserve-3d;
     transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s;
 }
 
@@ -1347,22 +1348,22 @@ img.loaded {
     z-index: 10;
 }
 
-/* Centering and subtle hover lift */
+/* Centering, shifting left, and applying subtle 3D tilt */
 .phone-center {
     top: 50%;
-    left: 16%;
-    transform: translate3d(-50%, -42%, 0);
+    left: 12%;
+    transform: translate3d(-50%, -42%, 40px) rotateX(15deg) rotateY(-8deg) rotateZ(-5deg);
     z-index: 3;
 }
 
 .phone-center:hover {
-    transform: translate3d(-50%, -45%, 0);
+    transform: translate3d(-50%, -45%, 60px) rotateX(10deg) rotateY(-5deg) rotateZ(-3deg);
     box-shadow: 
-        0 30px 60px rgba(0,0,0,0.18),
-        0 10px 25px rgba(0,0,0,0.1);
+        -15px 15px 35px rgba(0,0,0,0.18),
+        -5px 5px 12px rgba(0,0,0,0.12);
 }
 
-/* Sleek Flat Computer Monitor Mockup (Right) */
+/* Sleek Flat Computer Monitor Mockup (Right) - Perfectly Straight */
 .iso-monitor {
     position: absolute;
     width: 600px;
@@ -1373,16 +1374,16 @@ img.loaded {
     box-shadow: 
         0 25px 50px rgba(0,0,0,0.15),
         0 8px 20px rgba(0,0,0,0.08);
-    transform-style: flat;
+    transform-style: preserve-3d;
     transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s;
     top: 50%;
-    left: 68%;
-    transform: translate3d(-50%, -55%, 0);
+    left: 70%;
+    transform: translate3d(-50%, -55%, -20px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
     z-index: 1;
 }
 
 .iso-monitor:hover {
-    transform: translate3d(-50%, -58%, 0);
+    transform: translate3d(-50%, -58%, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
     box-shadow: 
         0 35px 70px rgba(0,0,0,0.2),
         0 12px 30px rgba(0,0,0,0.12);
