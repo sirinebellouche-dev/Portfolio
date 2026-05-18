@@ -1269,16 +1269,16 @@ img.loaded {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 380px;
+    height: 450px;
     width: 100%;
     overflow: visible;
     position: relative;
-    background: radial-gradient(circle, rgba(133, 83, 51, 0.04) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(133, 83, 51, 0.05) 0%, transparent 70%);
 }
 
 .iso-showcase-inner {
     position: relative;
-    width: 300px;
+    width: 520px;
     height: 300px;
     transform-style: preserve-3d;
     transform: scale(0.95) rotateX(20deg) rotateY(0deg) rotateZ(-8deg);
@@ -1291,11 +1291,11 @@ img.loaded {
 
 .iso-iphone {
     position: absolute;
-    width: 200px;
-    height: 410px;
+    width: 150px;
+    height: 310px;
     background: #000;
-    border-radius: 42px;
-    padding: 8px;
+    border-radius: 30px;
+    padding: 6px;
     box-shadow: 
         -10px 10px 25px rgba(0,0,0,0.12),
         -3px 3px 8px rgba(0,0,0,0.08),
@@ -1305,8 +1305,8 @@ img.loaded {
 }
 
 .iphone-bezel {
-    border: 3.5px solid;
-    border-radius: 34px;
+    border: 3px solid;
+    border-radius: 25px;
     height: 100%;
     box-sizing: border-box;
     overflow: hidden;
@@ -1315,7 +1315,7 @@ img.loaded {
 .iphone-screen {
     width: 100%;
     height: 100%;
-    border-radius: 30px;
+    border-radius: 21px;
     background-size: cover;
     background-position: top center;
     position: relative;
@@ -1341,61 +1341,142 @@ img.loaded {
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    width: 58px;
-    height: 14px;
+    width: 44px;
+    height: 10px;
     background: #000;
     border-radius: 20px;
     z-index: 10;
 }
 
-/* Perfect single centering and subtle hover lift */
+/* Single centering and subtle hover lift */
 .phone-center {
     top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
-    z-index: 2;
+    left: 22%;
+    transform: translate3d(-50%, -42%, 50px);
+    z-index: 3;
 }
 
 .phone-center:hover {
-    transform: translate3d(-50%, -52%, 20px);
+    transform: translate3d(-50%, -45%, 70px);
     box-shadow: 
         -15px 15px 35px rgba(0,0,0,0.18),
         -5px 5px 12px rgba(0,0,0,0.12);
 }
 
+/* 3D Computer Monitor Mockup (Right) */
+.iso-monitor {
+    position: absolute;
+    width: 310px;
+    height: 195px;
+    background: #000;
+    border-radius: 16px;
+    padding: 6px;
+    box-shadow: 
+        -12px 12px 30px rgba(0,0,0,0.15),
+        -4px 4px 10px rgba(0,0,0,0.1),
+        inset 0 0 2px rgba(255,255,255,0.25);
+    transform-style: preserve-3d;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s;
+    top: 50%;
+    left: 74%;
+    transform: translate3d(-50%, -55%, -10px);
+    z-index: 1;
+}
+
+.iso-monitor:hover {
+    transform: translate3d(-50%, -58%, 10px);
+    box-shadow: 
+        -16px 16px 40px rgba(0,0,0,0.2),
+        -6px 6px 15px rgba(0,0,0,0.14);
+}
+
+.monitor-bezel {
+    border: 3.5px solid #2d2d30;
+    border-radius: 12px;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.monitor-screen {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.monitor-screen::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 50%);
+    pointer-events: none;
+    z-index: 5;
+}
+
+.monitor-stand {
+    position: absolute;
+    bottom: -22px;
+    left: 50%;
+    transform: translateX(-50%) translateZ(-5px);
+    width: 40px;
+    height: 25px;
+    background: linear-gradient(to right, #202124, #404245, #202124);
+    z-index: -1;
+}
+
+.monitor-base {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%) translateZ(-10px) rotateX(85deg);
+    width: 90px;
+    height: 50px;
+    background: #2d2d30;
+    border-radius: 6px;
+    box-shadow: -2px 2px 10px rgba(0,0,0,0.2);
+}
+
 @media (max-width: 992px) {
     .iso-showcase-container {
-        height: 340px;
+        height: 380px;
     }
     .iso-showcase-inner {
-        transform: scale(0.85) rotateX(20deg) rotateZ(-8deg);
+        transform: scale(0.78) rotateX(20deg) rotateZ(-8deg);
     }
     .iso-showcase-inner:hover {
-        transform: scale(0.85) rotateX(15deg) rotateZ(-5deg);
+        transform: scale(0.78) rotateX(15deg) rotateZ(-5deg);
     }
 }
 
 @media (max-width: 768px) {
     .iso-showcase-container {
-        height: 300px;
+        height: 320px;
     }
     .iso-showcase-inner {
-        transform: scale(0.75) rotateX(20deg) rotateZ(-8deg);
+        transform: scale(0.6) rotateX(20deg) rotateZ(-8deg);
     }
     .iso-showcase-inner:hover {
-        transform: scale(0.75) rotateX(15deg) rotateZ(-5deg);
+        transform: scale(0.6) rotateX(15deg) rotateZ(-5deg);
     }
 }
 
 @media (max-width: 480px) {
     .iso-showcase-container {
-        height: 250px;
+        height: 260px;
     }
     .iso-showcase-inner {
-        transform: scale(0.62) rotateX(20deg) rotateZ(-8deg);
+        transform: scale(0.46) rotateX(20deg) rotateZ(-8deg);
     }
     .iso-showcase-inner:hover {
-        transform: scale(0.62) rotateX(15deg) rotateZ(-5deg);
+        transform: scale(0.46) rotateX(15deg) rotateZ(-5deg);
     }
 }
 
