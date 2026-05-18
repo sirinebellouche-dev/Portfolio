@@ -2064,6 +2064,15 @@ img.loaded {
     opacity: 0.1;
     border-radius: 4px;
     border: 1px solid var(--primary);
+    transition: opacity 0.3s ease;
+}
+
+.post-img-s.has-img {
+    opacity: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
 }
 
 .post-time {
@@ -2152,6 +2161,7 @@ html, body {
 
 .scrollable-mockup-wrapper .browser-mockup {
     min-width: 650px;
+    margin: 0 auto;
 }
 
 /* --- Table Breakpoint (992px) --- */
