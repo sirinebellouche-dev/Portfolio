@@ -2474,24 +2474,20 @@ html, body {
    ========================================================================== */
 @media (max-width: 768px) {
     .scrollable-mockup-wrapper {
-        width: 100vw !important;
-        max-width: 100vw !important;
-        margin-left: calc(-50vw + 50%) !important;
-        margin-right: calc(-50vw + 50%) !important;
-        overflow-x: hidden !important;
-        border-radius: 0 !important;
-        box-shadow: none !important; /* Integrates flat seamlessly on screen borders */
+        width: calc(100% + 16px) !important;
+        max-width: none !important;
+        overflow-x: hidden !important; /* Block all horizontal scrolls since it fits perfectly! */
+        margin-left: -8px !important; /* Shift slightly to the left to perfectly center on iPhone */
+        margin-right: auto !important;
         padding: 0 !important;
     }
 
     .scrollable-mockup-wrapper .browser-mockup {
-        min-width: 100vw !important;
-        width: 100vw !important;
-        max-width: 100vw !important;
-        margin: 0 !important;
-        border-radius: 0 !important;
-        border-left: none !important;
-        border-right: none !important;
+        min-width: 100% !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
     
     .meta-sidebar {
@@ -2549,10 +2545,8 @@ html, body {
 
 @media (max-width: 480px) {
     .scrollable-mockup-wrapper {
-        width: 100vw !important;
-        max-width: 100vw !important;
-        margin-left: calc(-50vw + 50%) !important;
-        margin-right: calc(-50vw + 50%) !important;
+        width: calc(100% + 24px) !important;
+        margin-left: -12px !important;
     }
 
     .meta-search {
