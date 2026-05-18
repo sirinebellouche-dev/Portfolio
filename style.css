@@ -1165,6 +1165,19 @@ img.loaded {
     100% { box-shadow: 0 0 0 0 rgba(133, 83, 51, 0); }
 }
 
+/* Annotation positions */
+.pt-1 { top: 15%; left: 10%; }
+.pt-2 { top: 45%; left: 80%; }
+.pt-3 { top: 75%; left: 30%; }
+
+@media (max-width: 768px) {
+    .pt-1 { 
+        top: 12%; 
+        left: -4%; /* Repoussé complètement à gauche pour ne plus couvrir le texte central/droite */
+    }
+}
+
+
 .feature-list-simple {
     list-style: none;
     margin-top: 2.5rem;
