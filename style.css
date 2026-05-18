@@ -1912,10 +1912,6 @@ img.loaded {
     
     .meta-suite-visual {
         order: 2;
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 auto !important;
-        padding: 0 !important;
     }
     
     .meta-suite-content {
@@ -2474,20 +2470,15 @@ html, body {
    ========================================================================== */
 @media (max-width: 768px) {
     .scrollable-mockup-wrapper {
-        width: calc(100% + 16px) !important;
-        max-width: none !important;
+        width: 96% !important;
         overflow-x: hidden !important; /* Block all horizontal scrolls since it fits perfectly! */
-        margin-left: -8px !important; /* Shift slightly to the left to perfectly center on iPhone */
-        margin-right: auto !important;
-        padding: 0 !important;
+        margin: 0 auto !important;
     }
 
     .scrollable-mockup-wrapper .browser-mockup {
         min-width: 100% !important;
         width: 100% !important;
-        max-width: 100% !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
+        margin: 0 auto !important;
     }
     
     .meta-sidebar {
@@ -2545,8 +2536,8 @@ html, body {
 
 @media (max-width: 480px) {
     .scrollable-mockup-wrapper {
-        width: calc(100% + 24px) !important;
-        margin-left: -12px !important;
+        width: 96% !important;
+        margin: 0 auto !important;
     }
 
     .meta-search {
